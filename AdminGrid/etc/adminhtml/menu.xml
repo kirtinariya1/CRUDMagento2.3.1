@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+            id="Ktpl_AdminGrid::ktpl"
+            title="Admin Grid"
+            module="Ktpl_AdminGrid"
+            sortOrder="20"
+            resource="Ktpl_AdminGrid::ktpl_admingrid"/>
+
+        <add
+            id="Ktpl_AdminGrid::ktpl_admingrid"
+            title="Banner Ktpl_AdminGrid"
+            module="Ktpl_AdminGrid"
+            sortOrder="20"
+            resource="Ktpl_AdminGrid::ktpl_admingrid"
+            parent="Ktpl_AdminGrid::ktpl"/>
+
+        <add
+            id="Ktpl_AdminGrid::minimumorder_manage"
+            title="Admin Management"
+            module="Ktpl_AdminGrid"
+            sortOrder="50"
+            parent="Ktpl_AdminGrid::ktpl_admingrid"
+            action="admingrid/item/index"
+            resource="Magento_Backend::content"/>
+    </menu>
+</config>
